@@ -3,7 +3,7 @@
 function custom_database_page() { //replace "custom_database_page" with your admin panel menu callback function
     global $wpdb;
 
-    $tablename = $wpdb->prefix . 'user_data'; //replace "user_data" with your existing table
+    $tablename = $wpdb->prefix . 'your_table_name'; //replace "your_table_name" with your existing table
 
     $column_names = $wpdb->get_col("DESC $tablename", 0);
     $data = $wpdb->get_results("SELECT * FROM $tablename", ARRAY_A);
